@@ -13,6 +13,7 @@ import utils
 from router import auth,posts,user , vote
 
 
+
 # models.Base.metadata.create_all(bind=engine)
 
 
@@ -24,13 +25,13 @@ app.include_router(auth.router)
 app.include_router(vote.router)
 
 
-try:
-    Conn = psycopg2.connect(host='localhost', database='apilearn',
-                            user='Punitha', password='2412', cursor_factory=RealDictCursor)
-    cursor = Conn.cursor()
-    print("Database connection was successful")
-except Exception as error:
-    print("Connecting to database failed")
+# try:
+#     Conn = psycopg2.connect(host='localhost', database='apilearn',
+#                             user='Punitha', password='2412', cursor_factory=RealDictCursor)
+#     cursor = Conn.cursor()
+#     print("Database connection was successful")
+# except Exception as error:
+#     print("Connecting to database failed")
 
 
 
