@@ -6,6 +6,7 @@ class Setting(BaseSettings):
     db_host : str
     db_port : int
     db_user : str
+    database_url : str
     class Config:
         env_file = '.env'
 
