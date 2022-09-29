@@ -31,6 +31,12 @@ try:
     print("Database connection was successful")
 except Exception as error:
     print("Connecting to database failed")
+
+
+
+@app.get('/')
+def start():
+    return {'msg':'Success'}
 '''
 
 class Post(BaseModel):
